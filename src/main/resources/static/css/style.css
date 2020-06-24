@@ -1,0 +1,29 @@
+:root {
+}
+
+body {
+  background-image: url("/pics/background.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  background-color: blue;
+  opacity: 90%;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.container {
+  background-color: blue;
+  opacity: 90%;
+  border-radius: 20px;
+  padding: 5px 0px 5px 15px;
+}
+
+a {
+  color: black;
+}
