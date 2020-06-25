@@ -1,5 +1,4 @@
 # Blog Site
-
 ## Module 3 Mastery Project
 
 ### Goals
