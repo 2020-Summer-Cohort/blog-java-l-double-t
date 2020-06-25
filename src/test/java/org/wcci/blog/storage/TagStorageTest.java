@@ -22,7 +22,7 @@ public class TagStorageTest {
 
     @Test
     public void shouldFindTagByName(){
-        when(tagRepo.findByName("sports")).thenReturn(Optional.of(new Tag("sports")));
+        when(tagRepo.findByTagName("sports")).thenReturn(Optional.of(new Tag("sports")));
         Tag result = underTest.findTagByName("sports");
         assertThat(result.getTagName()).isEqualTo("sports");
     }

@@ -22,7 +22,7 @@ public class CategoryStorageTest {
 
     @Test
     public void shouldFindByCategoryName(){
-        when(categoryRepo.findByName("Sports")).thenReturn(Optional.of(new Category("Sports")));
+        when(categoryRepo.findByCategoryName("Sports")).thenReturn(Optional.of(new Category("Sports")));
         Category result = underTest.findCategoryByName("Sports");
         assertThat(result.getCategoryName()).isEqualTo("Sports");
     }

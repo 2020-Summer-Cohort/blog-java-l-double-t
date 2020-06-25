@@ -1,8 +1,10 @@
 package org.wcci.blog.storage;
 
+import org.springframework.stereotype.Service;
 import org.wcci.blog.entities.Tag;
 import org.wcci.blog.storage.repositories.TagRepository;
 
+@Service
 public class TagStorage {
     private TagRepository tagRepo;
 
@@ -15,7 +17,7 @@ public class TagStorage {
     }
 
     public Tag findTagByName(String tagName) {
-        return tagRepo.findByName(tagName).get();
+        return tagRepo.findByTagName(tagName).get();
     }
 
     public void addTag(Tag tagToAdd) {

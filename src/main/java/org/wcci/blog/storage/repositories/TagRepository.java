@@ -6,5 +6,5 @@ import org.wcci.blog.entities.Tag;
 import java.util.Optional;
 
 public interface TagRepository extends CrudRepository<Tag, Long> {
-    Optional<Tag> findByName(String name);
+    Optional<Tag> findByTagName(String tagName);
 }
