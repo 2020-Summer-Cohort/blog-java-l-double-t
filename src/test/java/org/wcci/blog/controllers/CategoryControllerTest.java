@@ -24,6 +24,12 @@ public class CategoryControllerTest {
     }
 
     @Test
+    public void showAllCategoriesShouldShowAll(){
+        String templateName = underTest.showAllCategories( model);
+        assertThat(templateName).isEqualTo("categories-template");
+    }
+
+    @Test
     public void showSingleCategoryAsksCategoryStorageForSports(){
         String templateName = underTest.showSingleCategory("Sports", model);
         assertThat(templateName).isEqualTo("category-template");

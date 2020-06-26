@@ -21,9 +21,9 @@
 </header>
 <body>
 <div class="container">
-    <h2 th:text="${category.categoryName} + ' Blogs:'">Sports Blogs</h2>
+    <h2 th:text="'Blogs with ' + ${tag.tagName} + ' tag:'">Sports Blogs</h2>
     <ul>
-        <li th:each="blog: ${category.blogs}"><a th:text="${blog.blogTitle}" href="blog.html">Blog Title</a></li>
+        <li th:each="blog: ${tag.blogs}"><a th:text="${blog.blogTitle}" href="blog.html">Blog Title</a></li>
     </ul>
 </div>
 </body>

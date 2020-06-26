@@ -15,6 +15,12 @@ public class CategoryController {
         this.categoryStorage = categoryStorage;
     }
 
+    @GetMapping("categories")
+    public String showAllCategories( Model model) {
+        model.addAttribute("categories",categoryStorage.findAllCategories());
+        return "categories-template";
+    }
+
     @GetMapping("category/{categoryName}")
     public String showSingleCategory(@PathVariable String categoryName, Model model) {
         model.addAttribute("category", categoryStorage.findCategoryByName(categoryName));

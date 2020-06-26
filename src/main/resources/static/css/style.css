@@ -8,6 +8,65 @@
 
 }
 
+.container {
+  background-color: var(--gunmetal);
+  color: var(--blue);
+  opacity: 90%;
+  border-radius: 20px;
+  padding: 5px 0px 5px 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: var(--gunmetal);
+  color: var(--blue);
+  padding: 8px;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: static;
+  display: inline-table;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  z-index: 1;
+  position: relative;
+  background-color: var(--white);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.849);
+  
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--gunmetal);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: var(--gunmetal);
+  color: var(--white);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  display: none;
+}
+
 body {
   background-image: url("/pics/background.png");
   height: 100%;
@@ -24,16 +83,6 @@ header {
   border-radius: 20px;
   margin: 5px;
 }
-
-.container {
-  background-color: var(--gunmetal);
-  color: var(--blue);
-  opacity: 90%;
-  border-radius: 20px;
-  padding: 5px 0px 5px 15px;
-  font-family: 'Open Sans', sans-serif;
-}
-
 
 a {
   color: var(--blue);

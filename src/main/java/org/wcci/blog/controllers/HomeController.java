@@ -21,9 +21,6 @@ public class HomeController {
 
     @GetMapping("")
     public String showHomePage(Model model) {
-        model.addAttribute("tags",tagStorage.findAllTags());
-        model.addAttribute("categories",categoryStorage.findAllCategories());
-        model.addAttribute("authors",authorStorage.findAllAuthors());
         return "home-template";
     }
 }

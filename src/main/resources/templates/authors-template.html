@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog Website</title>
-    <link rel="stylesheet" href="../css/layout.css"/>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 <header>
     <h1>Blog Site</h1>
@@ -17,14 +17,15 @@
             <a href="/authors">Authors</a>
             <a href="/tags">Tags</a>
         </div>
-    </div>
-</header>
+    </div></header>
 <body>
 <div class="container">
-    <h2 th:text="${category.categoryName} + ' Blogs:'">Sports Blogs</h2>
-    <ul>
-        <li th:each="blog: ${category.blogs}"><a th:text="${blog.blogTitle}" href="blog.html">Blog Title</a></li>
-    </ul>
+    <div class="authors">
+        <h2>Authors:</h2>
+        <ul>
+            <li th:each="author: ${authors}"><a th:text="${author.name}" th:href="'/authors/' + ${author.name}">John Doe</a></li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>

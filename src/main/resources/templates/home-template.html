@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Blog Website</title>
-    <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/layout.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
 </head>
 <header>
     <h1>Blog Site</h1>
 </header>
 <body>
 <div class="container">
+    <div>
+        <p>Thanks for coming to our Blog. Choose a link to navigate to a list of applicable blogs.</p>
+    </div>
     <div class="categories">
-        <h2>Categories:</h2>
-        <ul>
-            <li th:each="category: ${categories}"><a th:text="${category.categoryName}" th:href="'/category/' + ${category.categoryName}">Sports Blogs</a></li>
-        </ul>
+        <h2><a href="/categories">Categories</a></h2>
     </div>
     <div class="authors">
-        <h2>Authors:</h2>
-        <ul>
-            <li th:each="author: ${authors}"><a th:text="${author.name}" href="author.html">John Doe</a></li>
-        </ul>
+        <h2><a href="/authors">Authors</a></h2>
     </div>
     <div class="tags">
-        <h2>Tags:</h2>
-        <ul>
-            <li th:each="tag: ${tags}"><a th:text="${tag.tagName}" href="tag.html">funny</a></li>
-        </ul>
+        <h2><a href="/tags">Tags</a></h2>
     </div>
 </div>
 </body>
