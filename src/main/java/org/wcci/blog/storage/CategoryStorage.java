@@ -23,4 +23,8 @@ public class CategoryStorage {
     public void addCategory(Category categoryName) {
         categoryRepo.save(categoryName);
     }
+
+    public Iterable<Category> findAllCategories() {
+        return categoryRepo.findAll();
+    }
 }

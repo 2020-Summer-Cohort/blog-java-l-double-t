@@ -23,4 +23,8 @@ public class TagStorage {
     public void addTag(Tag tagToAdd) {
         tagRepo.save(tagToAdd);
     }
+
+    public Iterable<Tag> findAllTags() {
+        return tagRepo.findAll();
+    }
 }

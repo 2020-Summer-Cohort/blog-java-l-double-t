@@ -12,12 +12,12 @@ import static org.mockito.Mockito.*;
 
 public class CategoryStorageTest {
     private CategoryRepository categoryRepo;
-    private CategoryStorage underTest;
+    private org.wcci.blog.storage.CategoryStorage underTest;
 
     @BeforeEach
     void setUp(){
         categoryRepo = mock(CategoryRepository.class);
-        underTest = new CategoryStorage(categoryRepo);
+        underTest = new org.wcci.blog.storage.CategoryStorage(categoryRepo);
     }
 
     @Test
