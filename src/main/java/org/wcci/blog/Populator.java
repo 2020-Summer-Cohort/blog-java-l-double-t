@@ -35,9 +35,9 @@ public class Populator implements CommandLineRunner {
         authorRepo.save(lT);
         Tag tag = new Tag("cool story");
         tagRepo.save(tag);
-        Blog blog1 = new Blog("Dak Prescott Signed his Franchise Tag","Dallas Cowboys finally signed his franchise tag. He is not set to play the 2020 season. Let's hope they come to a long term deal agreement.",trey,"2020-06-24" ,category1);
+        Blog blog1 = new Blog("Dak Prescott Signed his Franchise Tag","Dallas Cowboys finally signed his franchise tag. He is now set to play the 2020 season. Let's hope they come to a long term deal agreement.",trey,"2020-06-24" ,category1);
         Blog blog2 = new Blog("Trucks are cool","Trucks are cool. They can do a lot. And are helpful for a ton of projects.",trey,"2020-06-25",category2, tag);
-        Blog blog3 = new Blog("Cadillacs ratings", "Cadillacs are great reliable cars that are smoth to drive and durable. great for a spin on any sunny day!",lT,"2020-06-25",category2, tag);
+        Blog blog3 = new Blog("Cadillacs ratings", "Cadillacs are great reliable cars that are smooth to drive and durable. great for a spin on any sunny day!",lT,"2020-06-25",category2, tag);
         Blog blog4 = new Blog("Braxton miller career", "What is he doing these day? Can anyone tell me what is going on with him these days", lT, "2020-06-25",category1);
         blogRepo.save(blog1);
         blogRepo.save(blog2);

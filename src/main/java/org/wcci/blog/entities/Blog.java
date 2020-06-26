@@ -89,4 +89,8 @@ public class Blog {
                 ", category=" + category +
                 '}';
     }
+
+    public void addTag(Tag tagName) {
+        tags.add(tagName);
+    }
 }

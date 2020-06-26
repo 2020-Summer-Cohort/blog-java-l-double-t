@@ -12,7 +12,7 @@ public class BlogStorage {
         this.blogRepo = blogRepo;
     }
 
-    public Blog findBlogByTitle(String blogTitle) {
+    public Blog findBlogByBlogTitle(String blogTitle) {
         return blogRepo.findByBlogTitle(blogTitle).get();
     }
 

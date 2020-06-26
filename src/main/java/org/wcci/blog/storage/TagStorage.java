@@ -16,8 +16,8 @@ public class TagStorage {
         return tagRepo;
     }
 
-    public Tag findTagByName(String tagName) {
-        return tagRepo.findByTagName(tagName).get();
+    public Tag findTagByTagName(String tagName) {
+        return tagRepo.findTagByTagName(tagName).get();
     }
 
     public void addTag(Tag tagToAdd) {
@@ -26,5 +26,9 @@ public class TagStorage {
 
     public Iterable<Tag> findAllTags() {
         return tagRepo.findAll();
+    }
+
+    public boolean tagExists(String tagName) {
+        return tagRepo.findTagByTagName(tagName).isPresent();
     }
 }

@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.wcci.blog.entities.Author;
 import org.wcci.blog.entities.Blog;
 import org.wcci.blog.entities.Category;
-import org.wcci.blog.storage.BlogStorage;
 import org.wcci.blog.storage.repositories.BlogRepository;
 
 import java.util.Optional;
@@ -29,7 +28,7 @@ public class BlogStorageTest {
         Author testAuthor = mock(Author.class);
         Category testCategory = mock(Category.class);
         when(blogRepo.findByBlogTitle("Title")).thenReturn(Optional.of(new Blog("Title", "", testAuthor, "56", testCategory)));
-        Blog result = underTest.findBlogByTitle("Title");
+        Blog result = underTest.findBlogByBlogTitle("Title");
         assertThat(result.getBlogTitle()).isEqualTo("Title");
     }
 

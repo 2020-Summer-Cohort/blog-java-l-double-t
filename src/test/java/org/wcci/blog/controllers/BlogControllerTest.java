@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.ui.Model;
-import org.wcci.blog.entities.Blog;
 import org.wcci.blog.storage.BlogStorage;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -18,7 +17,7 @@ public class BlogControllerTest {
     @BeforeEach
     void setUp(){
         mockBlogStorage = mock(BlogStorage.class);
-        underTest = new BlogController(mockBlogStorage);
+        underTest = new BlogController(mockBlogStorage, tagStorage);
         model = Mockito.mock(Model.class);
     }
 
@@ -27,4 +26,5 @@ public class BlogControllerTest {
         String templateName = underTest.showSingleBlog("Blog Title", model);
         assertThat(templateName).isEqualTo("blog-template");
     }
+
 }

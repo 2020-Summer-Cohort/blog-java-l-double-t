@@ -31,9 +31,16 @@
     <div>
         <h3>Tags:</h3>
         <ul>
-            <li th:each="tag: ${blog.tags}"><a th:text="${tag.tagName}" th:href="'/tags/' +${tag.tagName}"> Funny</a></li>
+            <li th:each="tag: ${blog.tags}"><a th:text="${tag.tagName}" th:href="'/tags/' +${tag.tagName}"> Funny</a>
+            </li>
         </ul>
     </div>
+    <form action="/blog/addTag" method="POST">
+        <label for="add__a__tagName" class="form__label">Add your own tag:</label>
+        <input type="text" name="tagName" id="add__a__tagName">
+        <input type="hidden" th:value="${blog.blogTitle}" id="" name="blogTitle">
+        <button>Add a Tag</button>
+    </form>
     <h4 th:text="${blog.blogBody}">
         This is test blog content. This is test blog content.This is test blog
         content.This is test blog content.This is test blog content.This is test

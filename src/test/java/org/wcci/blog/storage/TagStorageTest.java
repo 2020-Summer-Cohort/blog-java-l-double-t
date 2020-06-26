@@ -22,8 +22,8 @@ public class TagStorageTest {
 
     @Test
     public void shouldFindTagByName(){
-        when(tagRepo.findByTagName("sports")).thenReturn(Optional.of(new Tag("sports")));
-        Tag result = underTest.findTagByName("sports");
+        when(tagRepo.findTagByTagName("sports")).thenReturn(Optional.of(new Tag("sports")));
+        Tag result = underTest.findTagByTagName("sports");
         assertThat(result.getTagName()).isEqualTo("sports");
     }
 

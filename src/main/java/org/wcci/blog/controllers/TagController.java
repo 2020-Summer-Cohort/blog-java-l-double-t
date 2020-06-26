@@ -22,7 +22,8 @@ public class TagController {
 
     @GetMapping("tags/{tagName}")
     public String showASingleTag(@PathVariable String tagName, Model model) {
-        model.addAttribute("tag", tagStorage.findTagByName(tagName));
+        model.addAttribute("tag", tagStorage.findTagByTagName(tagName));
         return "tag-template";
     }
+
 }
