@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Righteous&display=swap');
+
 :root {
+  --gunmetal: #022b3a;
+  --seaweed: #1f7a8c;
+  --blue: #bfdbf7;
+  --white: #ffffff;
+
 }
 
 body {
@@ -11,19 +18,41 @@ body {
 }
 
 header {
-  background-color: blue;
+  background-color: var(--gunmetal);
+  color: var(--blue);
   opacity: 90%;
   border-radius: 20px;
   margin: 5px;
 }
 
 .container {
-  background-color: blue;
+  background-color: var(--gunmetal);
+  color: var(--blue);
   opacity: 90%;
   border-radius: 20px;
   padding: 5px 0px 5px 15px;
+  font-family: 'Open Sans', sans-serif;
 }
 
+
 a {
-  color: black;
+  color: var(--blue);
+  text-decoration: none;
+}
+h2{
+  font-family: 'Righteous', cursive;
+}
+h1{
+  font-family: 'Righteous', cursive;
+}
+a:hover{
+  color: var(--seaweed);
+  text-shadow: var(--blue);
+  text-decoration: underline;
+  font-size: 125%;
+}
+
+header a{
+  font-family: 'Open Sans', sans-serif;
+
 }
