@@ -23,7 +23,7 @@
 <div class="container">
     <h2 th:text="${authorName} + '\'s Blogs:'">John Doe</h2>
     <ul>
-        <li th:each="blog: ${author.blogs}"><a th:text="${blog.blogTitle}" href="blog.html">Blog Title</a></li>
+        <li th:each="blog: ${author.blogs}"><a th:text="${blog.blogTitle}" th:href="'/blog/' + ${blog.blogTitle}">Blog Title</a></li>
     </ul>
 </div>
 </body>

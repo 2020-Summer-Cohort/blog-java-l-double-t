@@ -37,9 +37,9 @@ public class JpaWiringTest {
         categoryRepo.save(testCategory);
         Author testAuthor = new Author("John Doe");
         authorRepo.save(testAuthor);
-        Blog testBlog1 = new Blog("Sport Blog", "Stuff about sports", testAuthor, 25062020, testCategory);
+        Blog testBlog1 = new Blog("Sport Blog", "Stuff about sports", testAuthor, "25062020", testCategory);
         blogRepo.save(testBlog1);
-        Blog testBlog2 = new Blog("Movie Blog", "Stuff about a movie", testAuthor, 25062020, testCategory);
+        Blog testBlog2 = new Blog("Movie Blog", "Stuff about a movie", testAuthor, "25062020", testCategory);
         blogRepo.save(testBlog2);
 
         entityManager.flush();
@@ -58,11 +58,11 @@ public class JpaWiringTest {
         authorRepo.save(testAuthor1);
         Category testCategory = new Category("Sports Blogs");
         categoryRepo.save(testCategory);
-        Blog testBlog1 = new Blog("Sport Blog", "Stuff about sports", testAuthor1, 25062020, testCategory);
+        Blog testBlog1 = new Blog("Sport Blog", "Stuff about sports", testAuthor1, "25062020", testCategory);
         blogRepo.save(testBlog1);
-        Blog testBlog2 = new Blog("Movie Blog", "Stuff about a movie", testAuthor1, 22062020, testCategory);
+        Blog testBlog2 = new Blog("Movie Blog", "Stuff about a movie", testAuthor1, "22062020", testCategory);
         blogRepo.save(testBlog2);
-        Blog testBlog3 = new Blog("Book Blog", "Stuff about a book", testAuthor1, 02062020, testCategory);
+        Blog testBlog3 = new Blog("Book Blog", "Stuff about a book", testAuthor1, "02062020", testCategory);
         blogRepo.save(testBlog3);
 
         entityManager.flush();
@@ -85,11 +85,11 @@ public class JpaWiringTest {
         authorRepo.save(testAuthor1);
         Category testCategory = new Category("Sports Blogs");
         categoryRepo.save(testCategory);
-        Blog testBlog1 = new Blog("Sport Blog", "Stuff about sports", testAuthor1, 25062020, testCategory,testTag1);
+        Blog testBlog1 = new Blog("Sport Blog", "Stuff about sports", testAuthor1, "25062020", testCategory,testTag1);
         blogRepo.save(testBlog1);
-        Blog testBlog2 = new Blog("Movie Blog", "Stuff about a movie", testAuthor1, 22062020, testCategory, testTag2);
+        Blog testBlog2 = new Blog("Movie Blog", "Stuff about a movie", testAuthor1, "22062020", testCategory, testTag2);
         blogRepo.save(testBlog2);
-        Blog testBlog3 = new Blog("Book Blog", "Stuff about a book", testAuthor1, 02062020, testCategory, testTag1, testTag2);
+        Blog testBlog3 = new Blog("Book Blog", "Stuff about a book", testAuthor1, "02062020", testCategory, testTag1, testTag2);
         blogRepo.save(testBlog3);
 
         entityManager.flush();

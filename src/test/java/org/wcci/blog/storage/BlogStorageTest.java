@@ -28,7 +28,7 @@ public class BlogStorageTest {
     public void shouldFindBlogByTitle() {
         Author testAuthor = mock(Author.class);
         Category testCategory = mock(Category.class);
-        when(blogRepo.findByBlogTitle("Title")).thenReturn(Optional.of(new Blog("Title", "", testAuthor, 56, testCategory)));
+        when(blogRepo.findByBlogTitle("Title")).thenReturn(Optional.of(new Blog("Title", "", testAuthor, "56", testCategory)));
         Blog result = underTest.findBlogByTitle("Title");
         assertThat(result.getBlogTitle()).isEqualTo("Title");
     }
@@ -37,7 +37,7 @@ public class BlogStorageTest {
     public void shouldAddABlog() {
         Author testAuthor = mock(Author.class);
         Category testCategory = mock(Category.class);
-        Blog testBlog = new Blog("Title","",testAuthor,52564,testCategory);
+        Blog testBlog = new Blog("Title","",testAuthor,"52564",testCategory);
         underTest.addBlog(testBlog);
         verify(blogRepo).save(testBlog);
     }

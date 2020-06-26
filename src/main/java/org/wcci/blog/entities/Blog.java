@@ -15,7 +15,7 @@ public class Blog {
     private String blogBody;
     @ManyToOne
     private Author author;
-    private int publishDate;
+    private String publishDate;
     @ManyToOne
     private Category category;
     @ManyToMany
@@ -23,7 +23,7 @@ public class Blog {
 
     protected Blog(){}
 
-    public Blog(String blogTitle, String blogBody, Author author, int publishDate, Category category, Tag... tags) {
+    public Blog(String blogTitle, String blogBody, Author author, String publishDate, Category category, Tag... tags) {
         this.blogTitle = blogTitle;
         this.blogBody = blogBody;
         this.author = author;
@@ -44,7 +44,7 @@ public class Blog {
         return author;
     }
 
-    public int getPublishDate() {
+    public String getPublishDate() {
         return publishDate;
     }
 
