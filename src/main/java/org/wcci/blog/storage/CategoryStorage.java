@@ -27,4 +27,8 @@ public class CategoryStorage {
     public Iterable<Category> findAllCategories() {
         return categoryRepo.findAll();
     }
+
+    public boolean categoryExists(String categoryName) {
+        return categoryRepo.findByCategoryName(categoryName).isPresent();
+    }
 }

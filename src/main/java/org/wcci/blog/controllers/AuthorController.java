@@ -25,13 +25,13 @@ public class AuthorController {
     @GetMapping("/authors/{authorName}")
     public String showSingleAuthor(@PathVariable String authorName, Model model) {
         model.addAttribute("author",authorStorage.findAuthorByName(authorName));
-        return "redirect:/authors";
+        return "author-template";
     }
 
     @PostMapping("/addAuthor")
     public String addAnAuthor(String name){
         if(authorStorage.authorExists(name)){
-            return "authors-template";
+            return "redirect:/authors";
         }
         Author authorToAdd = new Author(name);
         authorStorage.addAuthor(authorToAdd);

@@ -112,3 +112,21 @@ footer p{
   margin-bottom: 3px;
 
 }
+
+.tags__on__blog li{
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 10px 5px 10px;
+  background-color: var(--seaweed);
+  color: var(--white);
+  border-radius: 5px;
+}
+
+.tags__on__blog li:hover{
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  background-color: var(--white);
+  color: var(--gunmetal);
+  border-radius: 5px;
+}

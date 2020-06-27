@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.wcci.blog.entities.Category;
 import org.wcci.blog.storage.CategoryStorage;
 import org.wcci.blog.storage.repositories.CategoryRepository;
 
@@ -29,5 +30,12 @@ public class CategoryController {
     }
 
     @PostMapping("/addCategory")
-    public String
+    public String addACategory(String categoryName){
+        if (categoryStorage.categoryExists(categoryName)){
+            return "redirect:/categories";
+        }
+        Category categoryToAdd = new Category(categoryName);
+        categoryStorage.addCategory(categoryToAdd);
+        return "redirect:/categories";
+    }
 }

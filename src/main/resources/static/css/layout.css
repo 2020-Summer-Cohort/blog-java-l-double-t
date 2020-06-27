@@ -4,6 +4,13 @@ header {
   align-items: center;
 }
 
+.tags__on__blog ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 footer {
   position: absolute;
   bottom: 4px;
