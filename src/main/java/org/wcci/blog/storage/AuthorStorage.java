@@ -27,4 +27,8 @@ public class AuthorStorage {
     public Iterable<Author> findAllAuthors() {
         return authorRepo.findAll();
     }
+
+    public boolean authorExists(String name) {
+        return authorRepo.findByName(name).isPresent();
+    }
 }

@@ -17,7 +17,6 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-/* Style The Dropdown Button */
 .dropbtn {
   background-color: var(--gunmetal);
   color: var(--blue);
@@ -26,13 +25,11 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: static;
   display: inline-table;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   z-index: 1;
@@ -43,7 +40,6 @@
   
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: var(--gunmetal);
   padding: 12px 16px;
@@ -51,18 +47,15 @@
   display: inline-block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   background-color: var(--gunmetal);
   color: var(--white);
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   display: none;
 }
@@ -103,5 +96,19 @@ a:hover{
 
 header a{
   font-family: 'Open Sans', sans-serif;
+}
+
+footer{
+  background-color: var(--gunmetal);
+  color: var(--blue);
+  opacity: 90%;
+  border-radius: 10px;
+  font-family: 'Open Sans', sans-serif;
+  width: 98.8%;
+}
+
+footer p{
+  margin-top: 3px;
+  margin-bottom: 3px;
 
 }

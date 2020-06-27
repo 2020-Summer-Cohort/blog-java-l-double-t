@@ -27,6 +27,14 @@
             <li th:each="category: ${categories}"><a th:text="${category.categoryName}" th:href="'/category/' + ${category.categoryName}">Sports Blogs</a></li>
         </ul>
     </div>
+    <form action="/addCategory" method="POST">
+        <label for="add__a__category" class="form__label">Add a Category:</label>
+        <input type="text" name="categoryName" id="add__a__category">
+        <button>Add</button>
+    </form>
 </div>
 </body>
+<footer>
+    <p>© L Double T Inc. | 2020</p>
+</footer>
 </html>
