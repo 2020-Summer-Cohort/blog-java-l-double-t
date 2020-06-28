@@ -1,21 +1,30 @@
 # Blog Site
 ## Module 3 Mastery Project
-
-### Goals
+## L Double T Blog Site
+#### Trey Grace & LaTerrell Humphries
+#####Goal
 Build a dynamic web application with a MVC architecture. 
-- Use TDD to create a suite of unit tests and integration tests.
-- Keep your code clean.
-  - Follow We Can Code IT's Java Style guide when writing your code.
-  - Use proper naming conventions.
-  - Make clear and concise names for methods and variables.
-  - Use OOP practices when you can.
-- Make effective use of git and GitHub.
-  - Make frequent commits.
-  - Utilize feature branching.
-- Working Software based on the Module 3 Mastery guideline at [Module 3 Mastery](https://wecancodeit-materials.netlify.com/exercises/mastery/blog-ssr/) 
-  - We are looking for an web application that utilizes a MVC architecture using spring boot.  
-  - We need to see dynamic content being rendered and the ability to add content to the application through an HTML form.
-  - Upon submission we should have an application that starts and passes all tests in the test folder.
-  - Prepare a custom README.md file.  Smart Columbus Open Data Enthusiasts provide a good resource for what an README.md could look like [here.](https://github.com/SCODEMeetup/scode-repo-template/blob/master/README.md)
- ### Resources
- In addition to [We Can Code IT materials](https://wecancodeit-materials.netlify.com/cohorts/java/module-three/), we've included a [HELP.md](./HELP.md) file that is provided by Spring Initializr to help with Spring documentation.
+#####What we accomplished
+-We started our project by making static html prototypes of what we wanted our blog site to look like.
+
+-Using TDD, We created all our POJOs, our Storage Classes, and our Controller Classes.
+
+-Also, used TDD JpaWiring Test to ensure all our POJOs were mapped correctly.
+
+-We created a Populator Class to prefill our website with some blog information.
+
+-Based of html prototypes, we created dynamic html templates for List of Categories, All blogs in a category, List of Authors, All blogs by an Author, List of Tags, and All blogs with a specific tag.
+
+-We also made a dynamic html template to display actual blog posts.
+
+-Users have the ability to add a Category to the page displaying all categories.
+
+-Users have the ability to add an Author to the page displaying all Authors.
+
+-Users have the ability to add Tags to individual blog posting and then find all blogs with similar Tags.
+
+-Users have the ability to add their own blog post with Authors and Categories already in the database. 
+
+- Authors and Categories must be added before adding review.
+
+
