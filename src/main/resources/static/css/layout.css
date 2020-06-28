@@ -12,11 +12,24 @@ header {
 }
 
 footer {
-  position: absolute;
-  bottom: 4px;
+  width: auto;
+  height: 60px;
+  bottom: 0;
+  line-height: 60px;
+  display: flex;
+  justify-content: center;
 }
 
 footer p {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: center; 
 }
+
+.add__blog {
+  display:flex;
+  flex-direction: column;
+    justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;}

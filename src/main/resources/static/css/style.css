@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Righteous&display=swap");
 
 :root {
   --gunmetal: #022b3a;
   --seaweed: #1f7a8c;
   --blue: #bfdbf7;
   --white: #ffffff;
-
 }
 
 .container {
@@ -14,7 +13,8 @@
   opacity: 90%;
   border-radius: 20px;
   padding: 5px 0px 5px 15px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  border: 2.5px solid var(--blue);
 }
 
 .dropbtn {
@@ -22,7 +22,7 @@
   color: var(--blue);
   padding: 8px;
   border: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .dropdown {
@@ -34,10 +34,10 @@
   display: none;
   z-index: 1;
   position: relative;
-  background-color: var(--white);
+  background-color: var(--seaweed);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.849);
-  
+  border-radius: 10px;
 }
 
 .dropdown-content a {
@@ -48,8 +48,9 @@
 }
 
 .dropdown-content a:hover {
-  background-color: var(--gunmetal);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--gunmetal);
+  border-radius: 10px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -75,45 +76,41 @@ header {
   opacity: 90%;
   border-radius: 20px;
   margin: 5px;
+  border: 2.5px solid var(--blue);
 }
 
 a {
   color: var(--blue);
   text-decoration: none;
 }
-h2{
-  font-family: 'Righteous', cursive;
+h2 {
+  font-family: "Righteous", cursive;
 }
-h1{
-  font-family: 'Righteous', cursive;
+h1 {
+  font-family: "Righteous", cursive;
 }
-a:hover{
+a:hover {
   color: var(--seaweed);
   text-shadow: var(--blue);
   text-decoration: underline;
   font-size: 125%;
 }
 
-header a{
-  font-family: 'Open Sans', sans-serif;
+header a {
+  font-family: "Open Sans", sans-serif;
 }
 
-footer{
+footer {
   background-color: var(--gunmetal);
   color: var(--blue);
   opacity: 90%;
-  border-radius: 10px;
-  font-family: 'Open Sans', sans-serif;
-  width: 98.8%;
+  border-radius: 20px;
+  font-family: "Open Sans", sans-serif;
+  border: 2.5px solid var(--blue);
+  margin-top: 5px;
 }
 
-footer p{
-  margin-top: 3px;
-  margin-bottom: 3px;
-
-}
-
-.tags__on__blog li{
+.tags__on__blog li {
   list-style-type: none;
   margin: 0;
   padding: 5px 10px 5px 10px;
@@ -122,11 +119,41 @@ footer p{
   border-radius: 5px;
 }
 
-.tags__on__blog li:hover{
+.tags__on__blog li:hover {
   list-style-type: none;
   margin: 0;
   padding: 10px;
   background-color: var(--white);
   color: var(--gunmetal);
   border-radius: 5px;
+}
+
+input {
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+}
+
+select {
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  margin-top: 10px;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  background-color: var(--seaweed);
+  color: var(--white);
+  border: 2px dotted var(--blue);
+}
+
+button:hover {
+  background-color: var(--white);
+  color: var(--seaweed);
+}
+
+textarea {
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
 }

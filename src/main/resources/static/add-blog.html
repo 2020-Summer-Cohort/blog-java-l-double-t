@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <header>
+    <h1>Blog Site</h1>
+    <div class="dropdown">
+      <button class="dropbtn">Navigate</button>
+      <div class="dropdown-content">
+        <a href="/">Home</a>
+        <a href="/categories">Categories</a>
+        <a href="/authors">Authors</a>
+        <a href="/tags">Tags</a>
+        <a href="/addablog">Add a Blog</a>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div class="container">
+      <h2>Add your own Blog Post</h2>
+
+      <form action="/blog/addablogpost" method="POST">
+        <div class="add__blog">
+          <label for="add__a__blogTitle" class="form__label">Blog Title:</label>
+          <input type="text" name="blogTitle" id="add__a__blogTitle" />
+          <label for="add__a__publishDate">Publish Date:</label>
+          <input type="date" id="add__a__publishDate" name="publishDate" />
+          <label for="add__an__author">Author:</label>
+          <select id="add__an__author" name="name">
+            <option
+              th:each="author: ${authors}"
+              th:text="${author.name}"
+              th:value="${author.name}"
+            >fgfgfgfgf</option>
+          </select>
+          <label for="add__an__category">Category:</label>
+          <select id="add__an__category" name="categoryName">
+            <option
+              th:each="category: ${categories}"
+              th:text="${category.categoryName}"
+              th:value="${category.categoryName}"
+            >fgfgfgfgfgfg</option>
+          </select>
+          <label for="add__a__blogBody" class="form__label">Blog Body:</label>
+          <textarea
+            name="blogBody"
+            id="add__a__blogBody"
+            cols="30"
+            rows="10"
+            maxlength="250"
+          ></textarea>
+          <button>Add a Blog</button>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <p>© L Double T Inc. | 2020</p>
+    </footer>
+  </body>
+</html>
